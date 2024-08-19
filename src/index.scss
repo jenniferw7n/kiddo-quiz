@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  place-items: center;
+  background: #87CEFA; /* Sky blue background */
+
+}
+
+.App::before{
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  min-width: 100%;
+  min-height: 100%;
+  height: 150%;
+  width: 110%;
+  opacity: 1;
+  z-index: -1;
+  background-image: url(/src/assets/cloud.svg);
+  background-size: 180% auto;
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.App {
+  font-family: 'Fredoka', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.home-screen {
+  margin: 20px;
+  padding: 20px;
+  width: auto;
+  height: 100vh;
+  background-image: url('./assets/hot-air-balloon.png'), url('./assets/hot-air-balloon2.png');
+  background-size: 20%, 40%; 
+  background-position: top left, center right; 
+  background-repeat: no-repeat, no-repeat; 
+}
+
+
+/* Primary button styles */
+button {
+  border: none;
+  font-family: 'Fredoka', sans-serif;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+
+header.header-bar{
+  background-color:transparent;
+  box-shadow: none;
+  
+  a{
+    width: fit-content;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+// button.primary {
+//   background-color: #1db4eb; /* Blue */
+//   color: white;
+// }
+
+// button.primary:hover {
+//   background-color: #0f8cb9; /* Darker Blue for hover effect */
+// }
+
+// /* Correct answer button */
+// button.correct {
+//   background-color: #DFF0D8; /* Light Green */
+//   color: #3C763D; /* Darker Green for text */
+// }
+
+// /* Incorrect answer button */
+// button.incorrect {
+//   background-color: #F2DEDE; /* Light Red */
+//   color: #A94442; /* Darker Red for text */
+// }
+
+// /* Secondary button styles */
+// button.secondary {
+//   background-color: #f7d979; /*yellow */
+//   color: #333;
+// }
+
+// button.secondary:hover {
+//   background-color: #debb47; /* Darker yellow for hover effect */
+// }

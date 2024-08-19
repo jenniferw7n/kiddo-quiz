@@ -1,0 +1,44 @@
+.quiz-screen {
+  margin: 20px;
+  width: auto;
+  height: 100vh;
+  background-image: url('@/assets/hot-air-balloon.png');
+  background-size: 20%; 
+  background-position: top left; 
+  background-repeat: no-repeat; 
+}
+
+.quiz-screen::before {
+  content: "";
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  width: 100%; 
+  height: 100%;  
+  opacity: 0.5; 
+  z-index: -1;
+  background-image: url('@/assets/bee-705412_1280.png');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: bottom right; 
+}
+
+.quiz-container {
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    h2{
+      margin: 0.5em;
+    }
+
+    .setting-btn{
+      margin: 0px 10px 5px;
+      background-color: cornsilk;
+  }
+}

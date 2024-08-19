@@ -1,0 +1,38 @@
+.congrats-message{
+    color: green;
+
+    .confetti{
+        position: absolute;
+        width: 100%;
+    }
+}
+
+.try-again-message {
+    color: #ff5733;
+}
+
+.congrats-img{
+    background: url(../assets/school-5097794_1280.png);
+    background-size: 300px auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 50%;
+    z-index: 0;
+}
+
+.tryAgain-img{
+    background: url(../assets/cat-156520_640.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: auto;
+    opacity: 30%;
+}

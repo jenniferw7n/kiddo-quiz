@@ -1,0 +1,111 @@
+.score-container{
+  position: absolute;
+  right: 10px;
+  top: -30px;
+  width: 40px;
+  height: 60px;
+  background-image: url('@/assets/bookmark_black.png');
+  background-color: #fff;
+  background-size: auto 100%;
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-position-x: center;
+
+  .score{
+    margin: 12px auto;
+    font-size: 0.75em;
+    font-weight: 500;
+    display: inline-block;
+  }
+}
+
+.score-container.active{
+  background-image: url('@/assets/bookmark_color.png');
+}
+
+.quiz {
+  width: auto;
+  margin: 0 10px;
+  text-align: center;
+  z-index: 0;
+
+  .section-header{
+    width: auto;
+      .icon{
+        margin: 2px;
+      }
+      .score{
+        margin: 2px;
+      }
+    }
+
+    .progress-header{
+      font-size: 0.8em;
+      text-transform: uppercase;
+    }
+
+    .progress-text{
+      font-size: 0.8em;
+      padding: 5px;
+    }
+  }
+  
+.question {
+  margin-bottom: 20px;
+  position: relative;
+  
+  h3{
+    font-size: 1.5em;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: 'Fredoka', sans-serif;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .btn-next, .btn-submit {
+    margin-left: auto;
+  }
+}
+
+
+.finalboard-btns {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+
+  button{ 
+    font-family: 'Fredoka', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button.secondary {
+    background-color: #009688;
+   
+  }
+  
+  button.secondary:hover {
+    background-color: #00796b;
+  }
+
+  // Responsive design for smaller screens
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: stretch; 
+      button {
+        margin: 10px 0; 
+      }
+    }
+}
+
+

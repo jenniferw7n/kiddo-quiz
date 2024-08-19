@@ -1,0 +1,90 @@
+
+.toolbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f9fc; /* Light background */
+    padding: 15px 20px;
+    border-radius: 15px 15px 0px 0px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+  
+    .toolbox-label {
+      font-family: 'Fredoka One', sans-serif;
+      color: #333;
+      margin-bottom: 10px;
+    }
+  
+    .type-control, .level-control, .num-control {
+      flex: 1;
+      margin: 0 15px;
+    }
+  
+    .toolbox-select {
+      width: 100%;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+      font-family: 'Fredoka One', sans-serif;
+      font-size: 1rem;
+      border-radius: '15px';
+      font-size: '1rem';
+      padding: '8px 16px';
+
+      .MuiOutlinedInput-notchedOutline {
+        border-color: transparent; // Remove default border
+      }
+  
+      &:hover .MuiOutlinedInput-notchedOutline {
+        border-color: #ffcc00; // Custom hover effect
+      }
+  
+      .MuiSelect-icon {
+        color: #ffcc00; // Custom icon color
+      }
+  
+      .MuiMenuItem-root {
+        font-family: 'Fredoka One', sans-serif;
+      }
+    }
+  
+    .toolbox-rating {
+      .MuiRating-icon {
+        font-size: 2rem; /* Increase icon size */
+        color: #ffcc00; /* Custom color */
+      }
+      .MuiRating-iconEmpty {
+        color: #ddd; /* Custom empty icon color */
+      }
+    }
+  
+    .num-slider {
+       height: 8; // Thicker track
+      .MuiSlider-thumb {
+        background-color: #ffcc00; /* Custom thumb color */
+        border: 2px solid #fff;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      }
+      .MuiSlider-track {
+        background-color: #ffcc00;
+      }
+      .MuiSlider-rail {
+        background-color: #ddd;
+      }
+      .MuiSlider-mark {
+        background-color: #ffcc00;
+        width: 4px;
+      }
+    }
+
+    // Responsive design for smaller screens
+    @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: stretch; 
+
+      .type-control, .level-control, .num-control {
+        margin: 10px 0; 
+      }
+    }
+  }
+  

@@ -1,0 +1,25 @@
+button.math {
+  font-family: 'Fredoka', sans-serif;
+  background-color: #1db4eb; /* Blue */
+  font-size: 1.5em;
+  color: white;
+}
+
+button.math:hover {
+  background-color: #0f8cb9; /* Darker Blue for hover effect */
+}
+
+button.reading {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.5em;
+  background-color: #f7d979; /*yellow */
+  color: #333;
+}
+
+button.reading:hover {
+  background-color: #debb47; /* Darker yellow for hover effect */
+}
+
+.icon{
+    margin:5px 10px; 
+}

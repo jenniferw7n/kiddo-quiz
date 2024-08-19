@@ -1,0 +1,18 @@
+<svg width="200" height="300" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Balloon Envelope -->
+  <ellipse cx="100" cy="120" rx="80" ry="100" fill="#FFB74D" stroke="#F57C00" stroke-width="4"/>
+  
+  <!-- Balloon Cords -->
+  <line x1="80" y1="220" x2="80" y2="160" stroke="#000" stroke-width="2"/>
+  <line x1="120" y1="220" x2="120" y2="160" stroke="#000" stroke-width="2"/>
+  
+  <!-- Balloon Basket -->
+  <rect x="80" y="220" width="40" height="30" fill="#6D4C41" stroke="#3E2723" stroke-width="3"/>
+  
+  <!-- Basket Details -->
+  <line x1="85" y1="220" x2="85" y2="250" stroke="#3E2723" stroke-width="2"/>
+  <line x1="115" y1="220" x2="115" y2="250" stroke="#3E2723" stroke-width="2"/>
+  
+  <!-- Balloon Highlights -->
+  <ellipse cx="100" cy="80" rx="70" ry="15" fill="white" opacity="0.3"/>
+</svg>
