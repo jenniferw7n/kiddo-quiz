@@ -1,14 +1,19 @@
 import { useState, useCallback, useEffect} from 'react';
 import CurrentQuestion from './CurrentQuestion';
 import ProgressIndicator from './ui/ProgressIndicator';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import '@/css/QuizSection.scss';
 import CustomCard from './ui/CustomCard';
 import CustomButton from './ui/CustomButton';
 import FinalScoreBoard from './FinalScoreBoard';
 
+import { resetScore } from '@/state/quiz/quizSlice';
+import { resetPassedQuestionIds } from '@/state/quiz/questionsSlice';
+
+
 const QuizSection = ({questions, showRetryWrongBtn, onRestart, onRetry}) => {
   const currentScore = useSelector((state) => state.quiz.score);
+  const dispatch = useDispatch();
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showFinalScore, setShowFinalScore]= useState(false);
@@ -49,7 +54,9 @@ const QuizSection = ({questions, showRetryWrongBtn, onRestart, onRetry}) => {
   useEffect(()=>{
     setShowFinalScore(false);
     setCurrentQuestionIndex(0);
-  }, [questions]);
+    dispatch(resetScore());
+    dispatch(resetPassedQuestionIds());
+  }, [questions, dispatch]);
     
     return (
       <CustomCard sx={{position: 'relative', zIndex: '-1', overflow: 'visible', minHeight: '50vh'}}>

@@ -13,13 +13,12 @@ import Tooltip from '@mui/material/Tooltip';
 import TuneIcon from '@mui/icons-material/Tune';
 
 import { resetScore } from '@/state/quiz/quizSlice';
-import { fetchQuestions, fetchWrongQuestions, resetPassedQuestionIds } from '@/state/quiz/questionsSlice';
+import { fetchQuestions, fetchWrongQuestions } from '@/state/quiz/questionsSlice';
 
 import '@/css/MathScreen.scss';
 
 const MathScreen = () => {
   const dispatch = useDispatch();
-  //const selector = useSelector();
 
   const [params, setParams] = useState({
     type: 'add-sub',
@@ -52,14 +51,10 @@ const MathScreen = () => {
 
   const handleRestart = ()=>{
     dispatch(fetchQuestions(fetchOptions));
-    dispatch(resetScore());
-    dispatch(resetPassedQuestionIds());
   }
 
   const handleRetry = ()=>{
     dispatch(fetchWrongQuestions());
-    dispatch(resetScore());
-    dispatch(resetPassedQuestionIds());
     questions = shuffleArray(wrongQuestions);
   }
     return (

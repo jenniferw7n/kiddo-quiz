@@ -10,7 +10,9 @@ const randomAddSubtraction = (level) =>{
   const c = Math.floor(Math.random() * 16) + 5;
   const d = Math.floor(Math.random() * 16) + 5;
   const e = Math.floor(Math.random()*100);
-  const simpleSubtraction = (a>=b)?
+  const f = Math.floor(Math.random()*100);
+
+  const simpleSubtraction = (a>b)?
   {
     question: `${a}-${b} = ?`,
     answer: a-b
@@ -18,21 +20,25 @@ const randomAddSubtraction = (level) =>{
     question: `${b}-${a} = ?`,
     answer: b-a
   };
-
-  switch(level) {
-    case (1):
+  switch(Number(level)) {
+    case 1:
      questionAndAnswerOptions = shuffleArray([
         simpleSubtraction,
         { question: `${a}+${b} = ?`,
           answer: a+b
         },
-      ]);
+    ]);
     question= questionAndAnswerOptions[0].question;
     answer = questionAndAnswerOptions[0].answer;
-
     break;
-    case(2) :
+    case 2 :
       questionAndAnswerOptions = shuffleArray([
+        {question: `${e}-${c} = ?`,
+          answer: e-c
+        },
+        {question: `${e}+${f} = ?`,
+          answer: e+f
+        },
         {question: `${c}-${b}+${a} = ?`,
           answer: c-b+a
         },
@@ -46,7 +52,7 @@ const randomAddSubtraction = (level) =>{
       question= questionAndAnswerOptions[0].question
       answer = questionAndAnswerOptions[0].answer;
     break;
-    case(3) :
+    case 3 :
       questionAndAnswerOptions =  shuffleArray([
         { question: `${c}-(${b}-${a}) = ?`,
           answer: c-(b-a)
@@ -63,13 +69,16 @@ const randomAddSubtraction = (level) =>{
         {question: `${e}+${d}-${c} = ?`,
           answer: e+d-c
         },
+        {question: `${e}-${f} = ?`,
+          answer: e-f
+        },
       ]);
       question= questionAndAnswerOptions[0].question
       answer = questionAndAnswerOptions[0].answer;
     break;
     default:
-      question = `${a}-${b} = ?`;
-      answer = a-b;
+      question = simpleSubtraction.question;
+      answer = simpleSubtraction.answer;
   }
 
   const randomShifterNum = getRandomItemInArray([2,3,4]);
