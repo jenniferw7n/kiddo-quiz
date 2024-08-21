@@ -41,7 +41,7 @@ const ToolBox = ({params, onChange}) => {
     return (
     <div className="toolbox">
         <div className='type-control'>
-            <Typography component="legend">Type</Typography>
+           <Typography component="legend">Type</Typography>
            <Select
             labelId="type-label"
             id="type-select"

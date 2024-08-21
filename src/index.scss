@@ -1,27 +1,9 @@
+//for the most master level css styling and ovewriting styles 
 body {
   margin: 0;
   padding: 0;
   place-items: center;
   background: #87CEFA; /* Sky blue background */
-
-}
-
-.App::before{
-  content: "";
-  position: absolute;
-  top: -10%;
-  left: -10%;
-  min-width: 100%;
-  min-height: 100%;
-  height: 150%;
-  width: 110%;
-  opacity: 1;
-  z-index: -1;
-  background-image: url(/src/assets/cloud.svg);
-  background-size: 180% auto;
-  background-repeat: repeat;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 .App {
@@ -34,15 +16,43 @@ body {
   font-size: 1.5em;
 }
 
+.App::before, .not-found-page::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 1;
+  z-index: -1;
+  background-image: url(/src/assets/cloud.svg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
 .home-screen {
-  margin: 20px;
-  padding: 20px;
   width: auto;
   height: 100vh;
   background-image: url('./assets/hot-air-balloon.png'), url('./assets/hot-air-balloon2.png');
-  background-size: 20%, 40%; 
-  background-position: top left, center right; 
+  background-size: 30%, 35%; 
+  background-position: top 1em left 1em, bottom 2em right 2em; 
   background-repeat: no-repeat, no-repeat; 
+  background-attachment: fixed;
+  overflow: hidden;
+  align-content:space-around;
+
+  .context-container{
+    margin: auto 1em 1.5em;
+    height: fit-content;
+    padding: 20px;
+
+    h1{
+      text-shadow: 2px 2px #FFF;
+      font-size: 2.5em;
+    }
+  }
 }
 
 
@@ -69,34 +79,3 @@ header.header-bar{
     text-decoration: none;
   }
 }
-
-// button.primary {
-//   background-color: #1db4eb; /* Blue */
-//   color: white;
-// }
-
-// button.primary:hover {
-//   background-color: #0f8cb9; /* Darker Blue for hover effect */
-// }
-
-// /* Correct answer button */
-// button.correct {
-//   background-color: #DFF0D8; /* Light Green */
-//   color: #3C763D; /* Darker Green for text */
-// }
-
-// /* Incorrect answer button */
-// button.incorrect {
-//   background-color: #F2DEDE; /* Light Red */
-//   color: #A94442; /* Darker Red for text */
-// }
-
-// /* Secondary button styles */
-// button.secondary {
-//   background-color: #f7d979; /*yellow */
-//   color: #333;
-// }
-
-// button.secondary:hover {
-//   background-color: #debb47; /* Darker yellow for hover effect */
-// }

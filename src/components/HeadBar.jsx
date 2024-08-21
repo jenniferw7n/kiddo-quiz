@@ -12,7 +12,7 @@ const HeadBar = () => {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Typography
-              variant="h5"
+              variant="h4"
               noWrap
               component={Link}
               to="/"
