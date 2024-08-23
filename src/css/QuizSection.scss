@@ -65,11 +65,20 @@
   margin-top: 20px;
 
   button {
-    padding: 10px 20px;
-    font-size: 1em;
     font-family: 'Fredoka', sans-serif;
     cursor: pointer;
     z-index: 1000;
+    border-radius: 20px;
+    border: 5px solid #fff;
+    background-color: #f0f0f0;
+    color: #000;
+    box-shadow: none;
+
+    :hover{
+      background-color: #ffcc00;
+      color: #fff;
+      box-shadow: #000 1px 1px 1px;
+    }
   }
 
   .btn-next, .btn-submit {

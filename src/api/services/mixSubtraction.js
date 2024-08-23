@@ -36,8 +36,8 @@ const randomAddSubtraction = (level) =>{
         {question: `${e}-${c} = ?`,
           answer: e-c
         },
-        {question: `${e}+${f} = ?`,
-          answer: e+f
+        {question: `${e}+${c} = ?`,
+          answer: e+c
         },
         {question: `${c}-${b}+${a} = ?`,
           answer: c-b+a

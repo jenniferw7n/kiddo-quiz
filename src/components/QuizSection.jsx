@@ -83,12 +83,12 @@ const QuizSection = ({questions, showRetryWrongBtn, onRestart, onRetry}) => {
         </div>
         <div className="navigation">
           {currentQuestionIndex > 0 && (
-            <button className="btn-previous" onClick={handlePrevious}>Previous</button>
+            <CustomButton className="btn-previous" onClick={handlePrevious}>Previous</CustomButton>
           )}
           {currentQuestionIndex < questions.length - 1 ? (
-            <button className="btn-next primary" onClick={handleNext}>Next</button>
+            <CustomButton className="btn-next primary" onClick={handleNext}>Next</CustomButton>
           ) : (
-            <button className="btn-submit primary" onClick={handleSubmit}>Submit</button>
+            <CustomButton className="btn-submit primary" onClick={handleSubmit}>Submit</CustomButton>
           )}
         </div>
       </div>
