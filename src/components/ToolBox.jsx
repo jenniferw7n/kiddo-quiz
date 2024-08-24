@@ -6,6 +6,7 @@ import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
 import OfflineBoltOutlinedIcon from '@mui/icons-material/OfflineBoltOutlined';
+import { typeOptions } from '@/lib/globalConsts';
 
 import '@/css/ToolBox.scss';
 
@@ -14,12 +15,6 @@ const ToolBox = ({params, onChange}) => {
     const [level, setLevel] = useState(params.level);
     const [numOfQuestions, setNumOfQuestions] = useState(params.numOfQuestions);
 
-    const typeOptions = [
-        { value: 'addition', label: 'Addition only' },
-        { value: 'add-sub', label: 'Mix Add & Sub' },
-        // { value: 'multiple', label: 'Multiple' }
-    ];
-
     const handleTypeChange = (event) => {
         const newType = event.target.value;
         setType(newType);
@@ -27,13 +22,13 @@ const ToolBox = ({params, onChange}) => {
     };
 
     const handleLevelChange = (event) => {
-        const newLevel = event.target.value;
+        const newLevel =  Number(event.target.value);
         setLevel(newLevel);
         onChange({ type, level: newLevel, numOfQuestions});
     };
 
     const handleNumChange = (event) => {
-        const newNum = event.target.value;
+        const newNum = Number(event.target.value);
         setNumOfQuestions(newNum);
         onChange({ type, level, numOfQuestions: newNum});
     };
@@ -61,9 +56,9 @@ const ToolBox = ({params, onChange}) => {
             <Typography component="legend">Level</Typography>
             <Rating
                 name="customized-color"
-                defaultValue={2}
+                value={level}
                 max = {3}
-                // getLabelText={(value: number) => `${value} Heart${value !== 1 ? 's' : ''}`}
+                min = {1}
                 precision={1}
                 icon={<OfflineBoltIcon fontSize="inherit" />}
                 emptyIcon={<OfflineBoltOutlinedIcon fontSize="inherit"/>}
@@ -75,7 +70,7 @@ const ToolBox = ({params, onChange}) => {
             <Slider
                 className='num-slider'
                 aria-label="Num Of Questions"
-                defaultValue={10}
+                value={numOfQuestions}
                 valueLabelDisplay="auto"
                 shiftStep={5}
                 step={5}

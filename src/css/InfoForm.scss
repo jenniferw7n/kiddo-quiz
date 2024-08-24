@@ -1,0 +1,81 @@
+.info-form-card{
+  h4.title{
+    margin: 10px auto;
+  }
+  p.slogan{
+    margin: 5px auto 1em;
+    font-size: 0.7em;
+  }
+}
+.info-form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Fredoka', sans-serif;
+
+
+    .form-control{
+        flex: 40%;
+        min-width: 220px;
+        margin: 10px;
+        border-radius: 10px;
+        background-color: #fff;
+        
+        label, input, select, .MuiButtonBase-root, .MuiMenuItem-root{
+            font-family: 'Fredoka', sans-serif;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        label{
+          background-color: #fff;
+          padding: 2px 5px;
+        }
+
+        select:hover .MuiOutlinedInput-notchedOutline {
+            border-color: #ffcc00; // Custom hover effect
+          }
+      
+        .MuiSelect-icon {
+            color: #ffcc00; // Custom icon color
+        }
+      
+        .MuiMenuItem-root {
+            font-family: 'Fredoka One', sans-serif;
+        }
+    }
+
+    .num-slider {
+        height: 8; // Thicker track
+       .MuiSlider-thumb {
+         background-color: #ffcc00; /* Custom thumb color */
+         border: 2px solid #fff;
+         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+       }
+       .MuiSlider-track {
+         background-color: #ffcc00;
+       }
+       .MuiSlider-rail {
+         background-color: #ddd;
+       }
+       .MuiSlider-mark {
+         background-color: #ffcc00;
+         width: 4px;
+       }
+     }
+
+     .btns{
+        width: 100%;
+        margin: 0 auto;
+        
+        button{
+          font-family: 'Fredoka One', sans-serif;
+          font-size: 0.6em;
+        }
+     }
+}
+
+.footnote{
+  font-size: 0.6em;
+  color: #888;
+}

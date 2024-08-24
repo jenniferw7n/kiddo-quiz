@@ -13,16 +13,13 @@ const quizSlice = createSlice({
        addOneScore: (state) =>{
             state.score = state.score+1;
        },
-       updateScore: (state, action) =>{
-        state.score = action.payload;
-        },
        resetScore: (state) =>{
             state.score = 0;
        },
     }
 });
 
-export const {addOneScore, updateScore, resetScore}  = quizSlice.actions;
+export const {addOneScore, resetScore}  = quizSlice.actions;
 
 export default quizSlice.reducer;
 

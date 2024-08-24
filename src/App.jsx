@@ -1,5 +1,7 @@
+import { createContext } from 'react';
 import { Outlet } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import useFetchLocal from '@/hooks/useFetchLocal';
 
 const theme = createTheme({
    fontFamily: 'Fredoka',
@@ -11,14 +13,19 @@ const theme = createTheme({
   },
 });
 
+const KidInfoContext = createContext(null);
 function App() {
+
+  const kidInfo =  useFetchLocal('kidInfo', 'kidGradeAndLevel');
   return (
+    <KidInfoContext.Provider value={kidInfo}>
     <ThemeProvider theme={theme}>
     <div className="App">
      <Outlet />
     </div>
     </ThemeProvider>
+    </KidInfoContext.Provider>
   );
 }
-
+export { KidInfoContext };
 export default App;
