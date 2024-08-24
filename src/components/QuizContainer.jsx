@@ -46,10 +46,8 @@ const QuizContainer = () => {
     setParams(params);
     dispatch(updateKidInfo(params));
     const data = {...JSON.parse(localStorage.getItem("kidGradeAndLevel")),...params};
-    console.log("localStorage to set", data);
     localStorage.setItem("kidGradeAndLevel", JSON.stringify(data));
-
-  }, []);
+  }, [dispatch]);
 
   const handleToggleSettings = ()=>{
     setShowSetting(!showSetting);
