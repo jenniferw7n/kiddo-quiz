@@ -1,0 +1,15 @@
+.App {
+  background-image: url(/src/assets/cloud.svg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+
+  @media (max-width: 800px) {
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+  }
+
+}

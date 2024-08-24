@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const HeadBar = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, zIndex:1000, position: 'relative' }}>
       <AppBar position="static" className="header-bar">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
