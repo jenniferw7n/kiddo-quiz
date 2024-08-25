@@ -2,7 +2,6 @@ import HeadBar from '@/components/HeadBar';
 import QuizContainer from '@/components/QuizContainer';
 import '@/css/MathScreen.scss';
 
-
 const MathScreen = () => {
     return (
       <>

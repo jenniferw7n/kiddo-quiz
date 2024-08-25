@@ -1,7 +1,8 @@
 import { Card, CardContent } from '@mui/material';
 import { motion } from 'framer-motion';
+import * as React from 'react'; 
 
-const CustomCard = ({ children, sx = {}, ...props }) => {
+const CustomCard = React.forwardRef(({ children, sx = {}, ...props }, ref) => {
   return (
     <motion.div
       initial={{ scale: 0.8, opacity: 0 }}
@@ -9,12 +10,13 @@ const CustomCard = ({ children, sx = {}, ...props }) => {
       transition={{ duration: 0.5 }}
       style={{ width: '100%', height: '100%', position: 'relative', zIndex: 1 }} // Ensure motion.div doesn't narrow the width
     >
-      <Card
+      <Card ref={ref}
         sx={{
           borderRadius: '20px',
           boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
           padding: '16px',
           textAlign: 'center',
+          position: 'relative',
           width: {
             sm: '90%',  
             md: '70%', 
@@ -37,6 +39,8 @@ const CustomCard = ({ children, sx = {}, ...props }) => {
       </Card>
     </motion.div>
   );
-};
+});
+
+CustomCard.displayName = "CustomCard";
 
 export default CustomCard;

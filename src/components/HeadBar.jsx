@@ -1,11 +1,18 @@
-import Box from '@mui/material/Box';
-import AppBar from '@mui/material/AppBar';
-import Container from '@mui/material/Container';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import {Box, AppBar,Modal, Container,Toolbar,Typography } from '@mui/material';
+import CustomAvatarLink from './ui/CustomAvatarLink';
+import InfoFormCard from './InfoFormCard';
+import { useSelector } from 'react-redux';
 
 const HeadBar = () => {
+  const [openModal, setOpenModal] = useState(false);
+
+  const kidInfo = useSelector((state)=>state.kidInfo);
+
+  const openAvatarLink = ()=> setOpenModal(true);
+  const handleClose = () => setOpenModal(false);
+
   return (
     <Box sx={{ flexGrow: 1, zIndex:1000, position: 'relative' }}>
       <AppBar position="static" className="header-bar">
@@ -28,9 +35,21 @@ const HeadBar = () => {
             >
               Kiddo Quiz
             </Typography>
+            <CustomAvatarLink name={kidInfo?.name? kidInfo.name: ""} onClick={openAvatarLink}/>
           </Toolbar>
         </Container>
       </AppBar>
+     
+        <Modal padding='20px'
+          open={openModal}
+          aria-labelledby="user-info-modal"
+          aria-describedby="form-to-edit-user-info"
+        >
+          <Box sx={{ margin: 2 }}>
+            <InfoFormCard showCloseButton={true} onClose={handleClose}/>
+          </Box>
+      
+      </Modal>
     </Box>
   );
 };

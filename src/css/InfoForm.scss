@@ -1,9 +1,13 @@
 .info-form-card{
+
   h4.title{
     margin: 10px auto;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 24px;
   }
   p.slogan{
     margin: 5px auto 1em;
+    font-family: 'Fredoka', sans-serif;
     font-size: 0.7em;
   }
 }
@@ -70,12 +74,13 @@
         
         button{
           font-family: 'Fredoka One', sans-serif;
-          font-size: 0.6em;
+          font-size: 16px;
         }
      }
 }
 
 .footnote{
-  font-size: 0.6em;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 16px;
   color: #888;
 }

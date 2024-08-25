@@ -2,7 +2,7 @@ import { BiMath } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 import CustomButton from "@/components/ui/CustomButton";
-import InfoForm from '@/components/InfoForm';
+import InfoFormCard from '@/components/InfoFormCard';
 import { KidInfoContext } from '@/App';
 
 import '@/css/HomeScreen.scss';
@@ -15,7 +15,7 @@ const HomeScreen = ()=> {
     <div className="home-screen">
       <div className="context-container">
       <h1>Kiddo Quiz</h1>
-      {!kidInfo && <InfoForm />}
+      {!kidInfo && <InfoFormCard showCloseButton={false}/>}
       {kidInfo &&
       <>
       <p>Get smarter every day with a fun quiz</p>
